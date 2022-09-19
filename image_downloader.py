@@ -9,6 +9,10 @@ args = parser.parse_args()
 
 response = simp.simple_image_download
 
+string = "grrks FOR grrks"
+ 
+# replace all instances of '،' with ',' for non-English text 
+args.imgs_name = args.imgs_name.replace("،", "," )
 keywords = args.imgs_name.split(',')
 
 for kw in keywords:
